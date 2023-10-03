@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        ;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    img {
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        background-image: url('https://cutewallpaper.org/21/1920-x-1080-gif/1920x1080-Wallpapercartoon-Wallpapers-Driverlayer-Search-.gif');
+        background-size: cover;
+        font-family: sans-serif;
+        margin-top: 40px;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .wrapper ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrapper ul li {
+        display: inline-block;
+        margin: 0 3px;
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    .wrapper ul li .fa {
+        color: #D8E2DC;
+        margin-top: 20px;
+        transition: all 0.5s ease;
+        z-index: 9999999999;
+
+    }
+
+    /* github */
+    .wrapper ul li:hover.github {
+        border: 5px solid #FFFFFF;
+        box-shadow: 0 0 15px #FFFFFF;
+        transition: all 0.5s ease;
+    }
+
+    .wrapper ul li:hover .fa-github {
+        color: #FFFFFF;
+        text-shadow: 0 0 15px #FFFFFF;
+        transition: all 0.5s ease;
+    }
+
+    /* linkedin */
+    .wrapper ul li:hover.linkedin {
+        border: 5px solid #007bb6;
+        box-shadow: 0 0 15px #007bb6;
+        transition: all 0.5s ease;
+    }
+
+    .wrapper ul li:hover .fa-linkedin {
+        color: #007bb6;
+        text-shadow: 0 0 15px #007bb6;
+        transition: all 0.5s ease;
+    }
+
+    /* instagram */
+    .wrapper ul li:hover.instagram {
+        border: 5px solid #bc2a8d;
+        box-shadow: 0 0 15px #bc2a8d;
+        transition: all 0.5s ease;
+    }
+
+    .wrapper ul li:hover .fa-instagram {
+        color: #bc2a8d;
+        text-shadow: 0 0 15px #bc2a8d;
+        transition: all 0.5s ease;
+    }
+
+    /* mail */
+    .wrapper ul li:hover.envelope {
+        border: 5px solid #d4384d;
+        box-shadow: 0 0 15px #d4384d;
+        transition: all 0.5s ease;
+    }
+
+    .wrapper ul li:hover .fa-envelope {
+        color: #d4384d;
+        text-shadow: 0 0 15px #d4384d;
+        transition: all 0.5s ease;
+    }
+</style>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Hello Visitor!</strong> I am looking for a full time job feel free to contact me if you like my
+        profile.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color:transparent">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-weight: bold;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/resume">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <img src="{{ photo }}" alt="Avatar" style="width:300px" class='mt-5'>
+    <h1 class='text-center mt-2' style="color:white;font-size:50px;;"><b>{{ name }}</b></h1>
+
+    <h1 class='text-center mt-2' style="color:whitesmoke;font-size:30px;;">
+        <i>{{ designation }}</i>
+    </h1>
+
+    <div class="wrapper">
+        <ul>
+            <li><a href='{{ github }}'><i class="fa fa-github fa-3x" aria-hidden='true'></i></a>
+            </li>
+            <li><a href='{{ linkedin }}'><i class="fa fa-linkedin fa-3x" aria-hidden='true'></i></a></li>
+            <li><a href='{{ instagram }}'><i class="fa fa-instagram fa-3x" aria-hidden='true'></i></a></li>
+            <li><a href='mailto:{{ email }}'><i class="fa fa-envelope fa-3x" aria-hidden='true'></i></a>
+            </li>
+    </div>
+
+    <div class="mx-5 my-5" style="background-color: rgb(0,0,0,0.5);">
+        <p class="media-body " style="color:white;font-size:20px;">
+            {{ description }}
+        </p>
+    </div>
+
+    <footer class='text-light bg-dark position-relative '>
+        <p class='text-center py-1 my-0'>
+            Made with ❤ by {{ name }} | <a href="https://machinelearningprojects.net/" style="color: white;text-decoration: auto;">Machine Learning Projects</a>
+        </p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
